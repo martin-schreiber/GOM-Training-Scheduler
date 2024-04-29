@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GOM Scheduler</string>
+    <string name="main_logo">main logo</string>
+
+    <string name="accom_details_here">accom details here\naccom details here\naccom details here\naccom details here</string>
+    <string name="small_accom_details_here">small accom</string>
+
+    <string name="travel_details_here">travel details here\ntravel details here\ntravel details here\ntravel details here</string>
+    <string name="small_travel_details_here">small travel</string>
+
+    <string name="daily_schedule">Daily Schedule</string>
+    <string name="back_arrow">Back Arrow</string>
+    <string name="auto_scheduler">AUTO SCHEDULER</string>
+    <string name="automatic_scheduler">AUTOMATIC SCHEDULER</string>
+
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/bulb_high_res"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/bulb_high_res"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GOMScheduler">
+        android:allowBackup="false"
+        android:fullBackupOnly="false"
+        <activity
+            android:name=".AutoSchedule"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".Schedule"
+            android:exported="false" />
+        <activity
+            android:name=".HomeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".AddSkill"
+            android:exported="false" />
+        <activity
+            android:name=".SubSkill"
+            android:exported="false" />
+    </application>
+
+</manifest>
