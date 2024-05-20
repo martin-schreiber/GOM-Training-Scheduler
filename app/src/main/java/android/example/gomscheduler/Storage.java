@@ -2,7 +2,10 @@ package android.example.gomscheduler;
 
 public class Storage {
     private static Storage instance;
-    private String globalString = "skills_storage_3";
+
+    //Change this to change data for OG skills
+    private String globalString = "skills_storage_master";
+
 
     private Storage() {
         // Private constructor to prevent instantiation

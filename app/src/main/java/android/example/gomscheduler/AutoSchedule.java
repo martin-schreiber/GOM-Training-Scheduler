@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.Console;
 import java.io.File;
 import java.io.IOException;
 
@@ -100,51 +101,18 @@ public class AutoSchedule extends AppCompatActivity {
     }
 
     private void setupStack() {
-        String[] names = {"aly", "andre", "annalise", "axel", "harper", "jake", "kevin", "shani"};
+
+        String[] names = { "aly",
+        "andre",
+        "annalise",
+        "axel",
+        "harper",
+        "jake",
+        "kevin",
+        "shani"};
         for(String name:names){
             nameStack.push(name);
         }
-    }
-
-    private void setHeads() {
-        int[] headIds = {R.id.AlyButton, R.id.AndreButton, R.id.annaliseButton, R.id.AxelButton, R.id.HarperButton, R.id.JacobButton, R.id.KevinButton, R.id.ShaniButton};
-        for( int person : headIds) {
-            HeadButton mHead = (HeadButton) findViewById(person);
-            mHead.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View view) {
-                    String name = mHead.getPerson();
-                    float alpha =  mHead.getAlpha();
-       ;
-
-                    alpha += 0.5;
-                    if(alpha > 1){
-                        alpha-=1;
-                    }
-
-                    mHead.setAlpha(alpha);
-
-
-                    if(nameStack.search(name)==-1){
-                        nameStack.push(name);
-
-                    } else {
-                        removeElement(nameStack,name);
-
-                    }
-                    for(String n: nameStack){
-                        System.out.println(n);
-                    }
-                    setSkills();
-                    setAdapter();
-
-
-
-                }
-
-
-            });
-            }
     }
 
     public static void removeElement(Stack<String> stack, String value) {
@@ -235,8 +203,10 @@ public class AutoSchedule extends AppCompatActivity {
         BufferedReader reader = new BufferedReader(is);
         String line;
         while ((line = reader.readLine()) != null) {
-            //System.out.println("line "+line);
+//            System.out.println("line "+line);
             String[] tokens=line.split(",");
+            //change this with skills
+            System.out.println("name " + tokens[8]);
             if(tokens[9].equals("1")) { //present in current list, not master
 
 
@@ -277,10 +247,49 @@ public class AutoSchedule extends AppCompatActivity {
         e.printStackTrace();
     }
 
+    }
 
 
+    private void setHeads() {
+        int[] names = {R.id.aly,R.id.andre,R.id.annalise,R.id.axel,R.id.harper,R.id.jake,R.id.kevin,R.id.shani};
 
+
+        for (int name : names) {
+            HeadButton mHeadButton = (HeadButton) findViewById(name);
+
+            mHeadButton.setAlpha(0.5f);
+            mHeadButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    float currentAlpha = mHeadButton.getAlpha();
+                    if (currentAlpha == 1.0f) {
+                        mHeadButton.setAlpha(0.5f); // Make it 50% transparent
+                    } else {
+                        mHeadButton.setAlpha(1.0f); // Restore full opacity
+                    }
+
+
+                    String n = mHeadButton.getPerson();
+
+                    if (nameStack.contains(n)) {
+                        removeElement(nameStack, n);
+                    } else {
+                        nameStack.push(n);
+                    }
+
+                    setSkills();
+                    setAdapter();
+
+                    System.out.println(n);
+
+                }
+
+
+            });
+        }
 
 
     }
+
 }

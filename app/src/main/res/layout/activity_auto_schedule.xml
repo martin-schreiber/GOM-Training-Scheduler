@@ -21,6 +21,121 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- LinearLayout container named head below the first TextView -->
+
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/auto_scheduler"
+        app:layout_constraintBottom_toTopOf="@+id/skillsRecycler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Eight HeadButton instances -->
+        <android.example.gomscheduler.HeadButton
+            android:id="@+id/aly"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Head Button 1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/alyssa"
+            android:tag="aly" />
+
+        <android.example.gomscheduler.HeadButton
+            android:id="@+id/andre"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Head Button 2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/andre"
+            android:tag="andre" />
+
+        <android.example.gomscheduler.HeadButton
+            android:id="@+id/annalise"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Head Button 3"
+            android:scaleType="centerCrop"
+            android:src="@drawable/annalise"
+            android:tag="annalise" />
+
+        <android.example.gomscheduler.HeadButton
+            android:id="@+id/axel"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Head Button 4"
+            android:scaleType="centerCrop"
+            android:src="@drawable/axel"
+            android:tag="axel" />
+
+        <android.example.gomscheduler.HeadButton
+            android:id="@+id/harper"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Head Button 5"
+            android:scaleType="centerCrop"
+            android:src="@drawable/harper"
+            android:tag="harper" />
+
+        <android.example.gomscheduler.HeadButton
+            android:id="@+id/jake"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Head Button 6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/jacob"
+            android:tag="jake" />
+
+        <android.example.gomscheduler.HeadButton
+            android:id="@+id/kevin"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Head Button 7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kevin"
+            android:tag="kevin" />
+
+        <android.example.gomscheduler.HeadButton
+            android:id="@+id/shani"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Head Button 8"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shani"
+            android:tag="shani" />
+
+
+    </LinearLayout>
+
     <ImageButton
         android:id="@+id/back_button"
         android:layout_width="60dp"
@@ -60,127 +175,6 @@
         app:layout_constraintVertical_bias="0.369"
         app:srcCompat="@android:drawable/ic_input_add" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/skillsRecycler"
-        app:layout_constraintTop_toBottomOf="@+id/auto_scheduler"
-        tools:layout_editor_absoluteX="0dp">
-
-        <android.example.gomscheduler.HeadButton
-            android:id="@+id/AlyButton"
-            android:tag="aly"
-            android:layout_width="0dp"
-            android:alpha="0.5"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="2dp"
-            android:background="@drawable/circle_button_background"
-            android:scaleType="fitCenter"
-            android:src="@drawable/alyssa"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="45dp" />
-
-        <android.example.gomscheduler.HeadButton
-            android:id="@+id/AndreButton"
-            android:tag="andre"
-            android:layout_width="0dp"
-            android:alpha="0.5"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="2dp"
-            android:background="@drawable/circle_button_background"
-            android:scaleType="fitCenter"
-            android:src="@drawable/andre"
-            tools:layout_editor_absoluteX="47dp"
-            tools:layout_editor_absoluteY="47dp" />
-
-        <android.example.gomscheduler.HeadButton
-            android:id="@+id/annaliseButton"
-            android:tag="annalise"
-            android:layout_width="0dp"
-            android:alpha="0.5"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="2dp"
-            android:background="@drawable/circle_button_background"
-            android:scaleType="fitCenter"
-            android:src="@drawable/annalise"
-            tools:layout_editor_absoluteX="102dp"
-            tools:layout_editor_absoluteY="45dp" />
-
-        <android.example.gomscheduler.HeadButton
-            android:id="@+id/AxelButton"
-            android:tag="axel"
-            android:layout_width="0dp"
-            android:alpha="0.5"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="2dp"
-            android:background="@drawable/circle_button_background"
-            android:scaleType="fitCenter"
-            android:src="@drawable/axel"
-            tools:layout_editor_absoluteX="155dp"
-            tools:layout_editor_absoluteY="45dp" />
-
-        <android.example.gomscheduler.HeadButton
-            android:id="@+id/HarperButton"
-            android:tag="harper"
-            android:layout_width="0dp"
-            android:alpha="0.5"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="2dp"
-            android:background="@drawable/circle_button_background"
-            android:scaleType="fitCenter"
-            android:src="@drawable/harper"
-            tools:layout_editor_absoluteX="155dp"
-            tools:layout_editor_absoluteY="45dp" />
-
-        <android.example.gomscheduler.HeadButton
-            android:id="@+id/JacobButton"
-            android:tag="jake"
-            android:layout_width="0dp"
-            android:alpha="0.5"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="2dp"
-            android:background="@drawable/circle_button_background"
-            android:scaleType="fitCenter"
-            android:src="@drawable/jacob"
-            tools:layout_editor_absoluteX="155dp"
-            tools:layout_editor_absoluteY="45dp" />
-
-        <android.example.gomscheduler.HeadButton
-            android:id="@+id/KevinButton"
-            android:tag="kevin"
-            android:layout_width="0dp"
-            android:alpha="0.5"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="2dp"
-            android:background="@drawable/circle_button_background"
-            android:scaleType="fitCenter"
-            android:src="@drawable/kevin"
-            tools:layout_editor_absoluteX="155dp"
-            tools:layout_editor_absoluteY="45dp" />
-        <android.example.gomscheduler.HeadButton
-            android:id="@+id/ShaniButton"
-            android:tag="shani"
-            android:layout_width="0dp"
-            android:alpha="0.5"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="2dp"
-            android:background="@drawable/circle_button_background"
-            android:scaleType="fitCenter"
-            android:src="@drawable/shani"
-            tools:layout_editor_absoluteX="155dp"
-            tools:layout_editor_absoluteY="45dp" />
-
-
-    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

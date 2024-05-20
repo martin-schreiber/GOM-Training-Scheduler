@@ -19,17 +19,18 @@ public class Skill {
     private boolean doable = false;
 
     public Skill(
-             boolean aly,
-             boolean andre,
-             boolean annalise,
-             boolean axel,
-             boolean harper,
-             boolean jake,
-             boolean kevin,
-             boolean shani,
+            boolean aly,
+            boolean andre,
+            boolean annalise,
+            boolean axel,
+            boolean harper,
+            boolean jake,
+            boolean kevin,
+            boolean shani,
             String name) {
 
         this.name = name;
+        System.out.println(name + " added");
 
         this.aly=aly;
         this.andre=andre;
@@ -61,14 +62,14 @@ public class Skill {
     //checks if 2 skills can be done at the same time
     public boolean canDoTogether(Skill s2) {
         if (
-        aly && s2.aly||
-        andre && s2.andre ||
-        annalise && s2.annalise ||
-        axel && s2.axel ||
-        harper && s2.harper||
-        jake && s2.jake ||
-        kevin && s2.kevin ||
-        shani && s2.shani
+                aly && s2.aly ||
+                andre && s2.andre ||
+                annalise && s2.annalise ||
+                axel && s2.axel ||
+                harper && s2.harper ||
+                jake && s2.jake ||
+                kevin && s2.kevin ||
+                shani && s2.shani
         ){
             return false;
         } else {
