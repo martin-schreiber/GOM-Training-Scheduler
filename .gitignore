@@ -1,0 +1,11 @@
+# Ignore Gradle files
+/.gradle
+/.idea
+/.git
+/gradle
+gradle-app.setting
+
+# Ignore IDE-specific files (if using an IDE)
+/.idea
+*.iml
+
