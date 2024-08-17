@@ -1,4 +1,4 @@
-A simple android application to aid in rehearsal scheduling for GOM. 
+PXL_20240816_033020335.TSA simple android application to aid in rehearsal scheduling for GOM.
 
 Should be compiled and run within Android Studio, either on an emulated device or on a connected device. 
 
